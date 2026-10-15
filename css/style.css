@@ -1,0 +1,405 @@
+ *{box-sizing: border-box;
+
+            margin: 0;
+            padding: 0;
+        
+        }
+        .dashboard{
+            display: flex;
+        }
+
+.dashboard-header{
+    width: 20%;
+    background-color: #370a06;
+    height: 100vh;
+    display :flex;
+    flex-direction: column;
+}
+
+.dashboard-main {
+ display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    padding: 30px;
+    flex: 1;
+    color: #d8cfcf;
+    background: black;
+    
+}
+
+.dashboard-footer-main{
+    margin-top: auto;
+
+}
+
+
+.dashboard-nav a {
+    text-decoration: none;
+    color: rgb(226, 221, 221)}
+    
+
+.dashboard-nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.dashboard-nav a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+   color: rgb(237, 233, 233);
+   
+}
+
+.dashboard-nav a:hover {
+    margin-top: 20px;
+    margin-bottom: 20px;
+   color: rgba(3, 1, 1, 0.912);
+}
+
+
+
+.dashboard-footer-sydebar{
+    color: rgb(243, 230, 230);
+    margin-top: auto;
+    padding: 20px;
+}
+
+.dashboard-header h1{
+    color: rgba(15, 7, 7, 0.948);
+    padding: 20px 20px 0 20px;
+
+}
+
+.dashboard-cards {
+    display: grid ;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px ;
+    width:100%;
+}
+    
+.card{
+    background-color: rgb(187, 6, 6);
+    color: rgba(12, 6, 6, 0.805);
+    padding: 30px;
+    border: 100px;
+     min-height: 150px;
+     border-radius: 20px;
+}
+
+.card:hover{
+     margin-top: 10px;
+    margin-bottom: 10px;
+   color: rgb(17, 11, 16);
+box-shadow: 0 12px 28px rgb(255, 6, 6);
+}
+
+
+.Estudiantes h2 {
+    background-color: rgb(246, 241, 248);
+    border-radius: 10px;
+    width: 45%;
+   
+}
+ 
+
+.Cursos h2{
+    background-color: rgb(243, 237, 245);
+    border-radius: 10px;
+    width: 35%;
+}
+
+.Enrollment h2 {
+    background-color: rgb(239, 235, 240);
+    border-radius: 10px;
+    width: 45%;
+}
+
+.Activas h2 {
+    background-color: rgb(232, 226, 234);
+    border-radius: 10px;
+    width: 35%;
+}
+
+.Canceladas h2{
+    background-color: rgb(236, 229, 237);
+    border-radius: 10px;
+    width: 45%;
+}
+
+.Completadas h2 {
+    background-color: rgb(237, 234, 238);
+    border-radius: 10px;
+    width: 45%;
+}
+
+   .numeros{
+     color: #faf8fa;
+    font-size: 24px;
+    margin-top: 20px;
+   }    
+
+
+.dashboard h1{
+    margin-bottom: 20px;
+    color: rgb(217, 5, 5);
+
+}
+
+.dashboard-footer-main {
+     padding: 20px 30px;
+    color: #e9e5e5;
+    font-size: 13px;
+}
+
+.dashboard-main h1{
+    margin-bottom: 20px;
+    color: rgba(255, 0, 0, 0.679);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    font-family:Arial, sans-serif;
+    background:#07090c;
+}
+
+/* SIDEBAR */
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:280px;
+    height:100vh;
+    background:#4b0000;
+    color:rgb(209, 210, 209);
+    display:flex;
+    flex-direction:column;
+}
+
+.sidebar h1{
+    color:red;
+    font-size:28px;
+    padding:20px;
+    font-weight:bold;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar ul li{
+    padding:15px 20px;
+}
+
+.sidebar ul li:hover{
+    background:#660000;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:rgb(235, 231, 231);
+    font-size:20px;
+}
+
+.usuario{
+    margin-top:auto;
+    padding:20px;
+    border-top:1px solid rgba(149, 21, 21, 0.3);
+}
+
+/* CONTENIDO */
+.main{
+    margin-left:280px;
+    color: rgba(255, 0, 0, 0.679);
+}
+
+.header{
+    background:rgba(1, 0, 0, 0.915);
+    padding:15px 25px;
+    border-bottom:1px solid #b31616;
+}
+
+.contenido{
+    padding:30px;
+    color:rgba(255, 0, 0, 0.679);
+}
+
+.cabecera{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color: #9e1e1e;
+}
+
+.btn-nuevo{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.btn-nuevo:hover{
+    background:#6c230b;
+}
+
+.buscador{
+    margin-top:30px;
+}
+
+.buscador input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.tabla{
+    margin-top:20px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td{
+    padding:15px;
+    text-align:left;
+}
+
+thead{
+    background:#490f05;
+}
+
+.btn-editar{
+    background:#ffc107;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+}
+
+.btn-eliminar{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   TABLA DE DATOS
+   ========================================== */
+.table-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #450a0a;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.table-header {
+  background-color: #4a0d05;
+  padding: 14px 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 140px; /* Ajusta según el número de columnas */
+  gap: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #dc2626;
+margin-top: 20px;
+}
+
+.table-row {
+  background-color: #ffffff;
+  padding: 12px 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 140px; /* Debe coincidir con table-header */
+  gap: 16px;
+  font-size: 14px;
+  color: #dc2626;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* ==========================================
+   BOTONES Y ACCIONES
+   ========================================== */
+.btn-primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1557b0;
+}
+
+.actions-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background-color: #eab308;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background-color: #ca8a04;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c;
+}

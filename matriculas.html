@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Sistema de Gestión de Cursos</title>
+
+
+
+<style>
+
+</style>
+
+</head>
+<body>
+
+<!-- MENU LATERAL -->
+<div class="sidebar">
+
+    <h1>
+        Sistema de<br>
+        Gestión de Cursos
+    </h1>
+
+    <nav class="dashboard-nav">
+                <ul class="dashboard-menu">
+                    <li><a href="dashboard.html" class="activo">Dashboard</a></li>
+
+                    <li><a href="estudiantes.html">Estudiantes</a></li>
+
+                    <li><a href="curso.html">Cursos</a></li>
+
+                    <li><a href="Matriculas.html">Matrículas</a></li>
+                </ul>
+            </nav>
+
+    <div class="usuario">
+        <strong>Kevin Osuna</strong><br>
+        kosuna@cesde.net
+    </div>
+
+</div>
+
+<!-- CONTENIDO -->
+<div class="main">
+
+    <div class="header">
+        <h4>Sistema de Gestión de Cursos</h4>
+    </div>
+
+    <div class="contenido">
+
+        <div class="cabecera">
+            <div>
+                <h1>Matriculas</h1>
+                <p>Gestión de matrículas registradas</p>
+                
+            </div>
+
+            <button class="btn-nuevo">
+               nueva matricula
+            </button>
+        </div>
+
+        <div class="buscador">
+            <input type="text" placeholder="Buscar Matricula...">
+        </div>
+
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>estudiante</th>
+                        <th>curso</th>
+                        <th>fecha</th>
+                        <th>estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>kevin osuna</td>
+                        <td>Bota de primavera</td>
+                        <td>24-10-26</td>
+                        <td>canecelado</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+</body>
