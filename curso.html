@@ -24,11 +24,11 @@
 
     <nav class="dashboard-nav">
                 <ul class="dashboard-menu">
-                    <li><a href="index.html" class="activo">Dashboard</a></li>
+                    <li><a href="index.html" >Dashboard</a></li>
 
                     <li><a href="estudiantes.html">Estudiantes</a></li>
 
-                    <li><a href="curso.html">Cursos</a></li>
+                    <li><a href="curso.html" class="activo">Cursos</a></li>
 
                     <li><a href="matriculas.html">Matrículas</a></li>
                 </ul>
@@ -56,31 +56,41 @@
             </div>
 
             <button class="btn-nuevo">
-                Nuevo Estudiante
+                Nuevo curso
             </button>
         </div>
 
         <div class="buscador">
             <input type="text" placeholder="Buscar Curso...">
         </div>
+<div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>curso</th>
+                        
+                        <th>Capacidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
 
-    <div class="table-container">
-      <div class="table-header">
-        <div>Código</div>
-        <div>Curso</div>
-        <div>Capacidad</div>
-        <div>Acciones</div>
-      </div>
-      
-      <div class="table-row">
-        <div>CS-101</div>
-        <div>Programación Web</div>
-        <div>30</div>
-        <div class="actions-group">
-          <button class="btn-edit">Editar</button>
-          <button class="btn-delete">Eliminar</button>
+                <tbody>
+                    <tr>
+                        <td>CS-101</td>
+                        <td>Programacion wed</td>
+                       
+                        <td>30</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
         </div>
-      </div>
+    
     </div>
   </div>
 </div>
