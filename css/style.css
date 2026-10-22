@@ -466,3 +466,96 @@ thead{
 .btn-delete:hover {
   background-color: #b91c1c;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- ESTILO TIPO APLICACIÓN MÓVIL (BARRA INFERIOR TIPO FACEBOOK) --- */
+@media screen and (max-width: 768px) {
+
+    /* El cuerpo deja espacio abajo para que la barra flotante no tape el contenido */
+    body {
+        flex-direction: column;
+        padding-bottom: 70px; 
+    }
+
+    /* Ocultamos los elementos innecesarios en la parte superior del menú en móvil */
+    .sidebar h1, 
+    .usuario {
+        display: none;
+    }
+
+    /* Convertimos el menú lateral en una barra fija flotante en la parte inferior */
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background-color: #141414; /* Fondo oscuro elegante */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    /* Ajustamos la navegación para que los elementos se pongan en línea horizontal */
+    .dashboard-nav {
+        padding: 0;
+        width: 100%;
+    }
+
+    .dashboard-nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Estilo de los botones del menú inferior tipo app */
+    .dashboard-nav a {
+        padding: 8px 12px;
+        font-size: 11px;
+        text-align: center;
+        border-radius: 8px;
+        color: #888;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    /* Cuando esté activo o con el cursor encima */
+    .dashboard-nav a.activo,
+    .dashboard-nav a:hover {
+        background: none;
+        color: #ff3333;
+        box-shadow: none;
+    }
+
+    /* Contenido principal ocupa todo el ancho en móvil */
+    .main {
+        padding: 20px 15px;
+        min-height: auto;
+    }
+
+    /* Las tarjetas en una sola columna para que se vean ordenadas */
+    cards.dashboard-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
