@@ -1,171 +1,225 @@
- *{box-sizing: border-box;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            margin: 0;
-            padding: 0;
-        
-        }
-        .dashboard{
-            display: flex;
-        }
+body {
+    display: flex;
+    background-color: #0b0b0b;
+    font-family: Arial, sans-serif;
+    color: #e2dcdc;
+    min-height: 100vh;
+}
 
-.dashboard-header{
+/* --- MENÚ LATERAL --- */
+.sidebar {
     width: 20%;
-    background-color: #370a06;
+    background-color: #0b0b0b;
     height: 100vh;
-    display :flex;
+    display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.dashboard-main {
- display: flex;
+.sidebar h1 {
+    color: #ff3333;
+    font-size: 18px;
+    padding: 25px 20px 15px 20px;
+    line-height: 1.3;
+}
+
+.dashboard-nav {
+    padding: 10px 15px;
+}
+
+.dashboard-nav ul {
+    display: flex;
     flex-direction: column;
-    min-height: 100dvh;
-    padding: 30px;
-    flex: 1;
-    color: #d8cfcf;
-    background: black;
-    
+    gap: 8px;
+    list-style: none;
 }
-
-.dashboard-footer-main{
-    margin-top: auto;
-
-}
-
 
 .dashboard-nav a {
     text-decoration: none;
-    color: rgb(226, 221, 221)}
-    
-
-.dashboard-nav ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
+    color: #a0a0a0;
+    display: block;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.2s ease;
 }
 
-.dashboard-nav a {
-    margin-top: 20px;
-    margin-bottom: 20px;
-   color: rgb(237, 233, 233);
-   
-}
-
+/* Estilo para el enlace activo (como Dashboard en la foto) */
+.dashboard-nav a.activo,
 .dashboard-nav a:hover {
-    margin-top: 20px;
-    margin-bottom: 20px;
-   color: rgba(3, 1, 1, 0.912);
+    background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
 }
 
-
-
-.dashboard-footer-sydebar{
+.usuario {
     color: rgb(243, 230, 230);
     margin-top: auto;
     padding: 20px;
-}
-
-.dashboard-header h1{
-    color: rgba(15, 7, 7, 0.948);
-    padding: 20px 20px 0 20px;
-
-}
-
-.dashboard-cards {
-    display: grid ;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px ;
-    width:100%;
-    padding-top: 20px;
-}
-    
-.card{
-    background-color: rgb(187, 6, 6);
-    color: rgba(12, 6, 6, 0.805);
-    padding: 30px;
-    border: 100px;
-     min-height: 150px;
-     border-radius: 20px;
-}
-
-.card:hover{
-     margin-top: 10px;
-    margin-bottom: 10px;
-   color: rgb(17, 11, 16);
-box-shadow: 0 12px 28px rgb(255, 6, 6);
-}
-
-
-.Estudiantes h2 {
-    background-color: rgb(246, 241, 248);
-    border-radius: 10px;
-    width: 45%;
-   
-}
- 
-
-.Cursos h2{
-    background-color: rgb(243, 237, 245);
-    border-radius: 10px;
-    width: 35%;
-}
-
-.Enrollment h2 {
-    background-color: rgb(239, 235, 240);
-    border-radius: 10px;
-    width: 45%;
-}
-
-.Activas h2 {
-    background-color: rgb(232, 226, 234);
-    border-radius: 10px;
-    width: 35%;
-}
-
-.Canceladas h2{
-    background-color: rgb(236, 229, 237);
-    border-radius: 10px;
-    width: 45%;
-}
-
-.Completadas h2 {
-    background-color: rgb(237, 234, 238);
-    border-radius: 10px;
-    width: 45%;
-}
-
-   .numeros{
-     color: #faf8fa;
-    font-size: 24px;
-    margin-top: 20px;
-   }    
-
-
-.dashboard h1{
-    margin-bottom: 20px;
-    color: rgb(217, 5, 5);
-    font-family:Arial, sans-serif;
-
-}
-
-.dashboard-footer-main {
-     padding: 20px 30px;
-    color: #e9e5e5;
     font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.dashboard-main h1{
-    margin-bottom: 20px;
-    color: rgba(255, 0, 0, 0.679);
+/* Simulamos el avatar circular con las iniciales KO que aparece en la foto */
+.usuario::before {
+    content: "KO";
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
+/* --- CONTENIDO PRINCIPAL --- */
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 30px;
+    flex: 1;
+    background: #0b0b0b;
+}
 
+.header {
+    margin-bottom: 10px;
+}
 
+.header h4 {
+    color: #e50914;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.contenido h1 {
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+/* Punto rojo decorativo antes de la palabra Dashboard */
+.contenido h1::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #e50914;
+    border-radius: 50%;
+    display: inline-block;
+}
 
+/* --- GRID DE TARJETAS --- */
+cards.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
 
+/* --- TARJETAS (Diseño oscuro elegante con borde sutil) --- */
+card.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #141414; /* Fondo negro carbón como en la referencia */
+    border: 1px solid rgba(255, 255, 255, 0.06); /* Borde sutil */
+    padding: 24px;
+    min-height: 150px;
+    border-radius: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto Hover: se eleva y resalta ligeramente el borde rojo */
+card.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(229, 9, 20, 0.4);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.2);
+    background-color: #181414;
+}
+
+/* Títulos de las tarjetas en mayúsculas y color claro */
+card.card h2 {
+    color: #ff4d4d;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: none !important;
+    width: 100%;
+    padding: 0;
+}
+
+/* Números grandes en blanco puro */
+.numeros {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+
+/* Simulamos el icono sutil en la esquina superior derecha de cada tarjeta */
+card.card::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Iconos personalizados según el tipo de tarjeta si deseas mantener el detalle de la foto */
+card.card.Cursos::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path></svg>');
+}
+
+card.card.Enrollment::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>');
+}
+
+card.card.Activas::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>');
+}
+
+card.card.Canceladas::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>');
+}
+
+card.card.Completadas::after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>');
+}
 
 
 
